@@ -9,9 +9,21 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="add visible">
+        <h1>Add Youtube Idea</h1>
+        <button id="cancel"><img src="assets/cancel.png"></button>
+        <label for="title">Youtube Title</label>
+        <input type="text" id="title">
+        <label for="description">Description</label>
+        <textarea id="description" cols="30" rows="3"></textarea>
+        <label for="budget">Average Budget</label>
+        <input type="number" id="budget">
+        <button id="add">Add</button>
+    </div>
+
     <header>
         <h1>Youtube Ideas NotePad</h1>
-        <button><img src="assets/add.png"></button>
+        <button class="add-idea"><img src="assets/add.png"></button>
     </header>
 
     <ul id="ideas">

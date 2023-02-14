@@ -4,11 +4,75 @@ $bg-color: #5A94E6;
 $header-bg-color: #002861;
 
 body {
+    min-height: 100vh;
+    position: relative;
     margin: 0;
     background-color: $bg-color;
     display: flex;
     flex-direction: column;
     gap: 5rem;
+
+    div.add {
+        width: 50%;
+        max-width: 350px;
+        padding: 2rem;
+        background-color: $header-bg-color;
+        box-shadow: 0px 0px 30px black;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        display: grid;
+        grid-template-columns: 100%;
+        
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #cancel {
+            position: relative;
+            left: 95%;
+            top: -280%;
+            width: 32px;
+            padding: 0;
+            border: none;
+            outline: none;
+            background-color: unset;
+            &:hover {
+                cursor: pointer;
+            }
+            img {
+                width: 32px;
+            }
+        }
+        
+
+        * {
+            color: white;
+        }
+
+        label {
+            font-size: 1.3rem;
+        }
+
+        input, textarea {
+
+            padding: 5px 12px;
+            outline: none;
+            border: none;
+            margin-bottom: 1rem;
+            resize:none;
+            background-color:$bg-color;
+        }
+
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }   
+    }
+    
     * {
         font-family: 'Poppins', sans-serif;
         color: #fff;
@@ -17,31 +81,32 @@ body {
     header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 0;
-        padding: 1rem;
+        padding: 2rem;
         position: sticky;
         top: 0;
         background-color: $header-bg-color;
 
         h1 {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             text-align: center;
         }
 
         button {
             all: unset;
-            
-
-            
+            padding: 0;
             img {
-                filter:drop-shadow(0px 0px 10px black);
+                width: 52px;
                 transition: all 0.2s ease-in-out;
                 &:hover {
                     transform: scale(1.1);
+                    filter: drop-shadow(0px 0px 5px white);
                     cursor: pointer;
                 }
             }
-        }        
+        }   
+          
     }
 
     #ideas {
