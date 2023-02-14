@@ -10,6 +10,7 @@ body {
 }
 
 body div.add {
+  display: none;
   width: 50%;
   max-width: 350px;
   padding: 2rem;
@@ -48,21 +49,38 @@ body div.add #cancel img {
   width: 32px;
 }
 
+body div.add #add {
+  border: none;
+  outline: none;
+  background-color: unset;
+  font-size: 1.2rem;
+  width: min-content;
+  margin: auto;
+  padding: 5px 1rem;
+}
+
+body div.add #add:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.471);
+}
+
 body div.add * {
   color: white;
 }
 
 body div.add label {
   font-size: 1.3rem;
+  margin-bottom: 5px;
 }
 
 body div.add input, body div.add textarea {
-  padding: 5px 12px;
+  padding: 8px 12px;
   outline: none;
   border: none;
   margin-bottom: 1rem;
   resize: none;
   background-color: #5A94E6;
+  font-size: 1.1rem;
 }
 
 body div.add input::-webkit-outer-spin-button, body div.add input::-webkit-inner-spin-button {
